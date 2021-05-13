@@ -1,0 +1,46 @@
+@font-face {
+    font-family: fontGameXucXac;
+    src: url(./Pony.ttf);
+}
+.gameXucXac {
+    background-image: url(./bgGame.png);
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: fixed;
+    font-family: fontGameXucXac;
+}
+.btnTai {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+}
+.btnXiu {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+.imgXucXac {
+    margin: 0 5px;
+}
+.textIntro {
+    font-size: 30px;
+}
+.textKetQua {
+    font-size: 30px;
+    color: red;
+}
+.btnPlayGame {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+}

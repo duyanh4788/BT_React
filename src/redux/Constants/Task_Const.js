@@ -1,0 +1,7 @@
+export const ADD_TASK_LIST = 'ADD_TASK_LIST';
+export const CHANGE_THEMES_TL = 'CHANGE_THEMES_TL';
+export const DONE_TODO_TL = 'DONE_TODO_TL';
+export const DONE_COMPLTE_TL = 'DONE_COMPLTE_TL';
+export const DELL_TASKLIST = 'DELL_TASKLIST';
+export const EDIT_TASKLIST = 'EDIT_TASKLIST';
+export const UPDATE_TASKLIST = 'UPDATE_TASKLIST';

@@ -1,0 +1,2 @@
+export const GET_SINHVIEN = 'GET_SINHVIEN'
+export const ADD_SINHVIEN = 'ADD_SINHVIEN'

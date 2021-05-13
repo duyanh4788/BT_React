@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.classModel {
+  position: relative;
+}
+.classtest {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+}

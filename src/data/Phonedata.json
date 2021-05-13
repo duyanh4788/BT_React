@@ -1,0 +1,42 @@
+[
+    {
+      "maSP" : 1,
+      "tenSP": "VS Phone",
+      "manHinh": "AMOLED, FHD+ 2232 x 1080 pixels",
+      "hdh": "Android 9.0 (Pie)",
+      "camT": "20 MP",
+      "camS": "Chính 48 MP & Phụ 8 MP, 5 MP",
+      "ram": "4 GB",
+      "rom": "6 GB",
+      "hinhAnh": "./img/vsphone.jpg",
+      "gia": 15000000,
+      "soLuong":1
+    },
+    {
+      "maSP" : 2,
+      "tenSP": "MeZi Phone",
+      "manHinh": "IPSLED , 6.2'', Full HD+",
+      "hdh": "Android 9.0 (Pie)",
+      "camT": "25 MP",
+      "camS": "Chính 48 MP & Phụ 8 MP, 5 MP",
+      "ram": "6 GB",
+      "rom": "8 GB",
+      "hinhAnh": "./img/meizuphone.jpg",
+      "gia": 23500000,
+      "soLuong":1
+    },
+    {
+      "maSP" : 3,
+      "tenSP": "I Phone",
+      "manHinh": "OLED, 6.5'', 1242 x 2688 Pixels",
+      "hdh": "Android 9.0 (Pie)",
+      "camT": "30 MP",
+      "camS": "Chính 48 MP & Phụ 8 MP, 5 MP",
+      "ram": "8 GB",
+      "rom": "10 GB",
+      "hinhAnh": "./img/applephone.jpg",
+      "gia": 45000000,
+      "soLuong":1
+    }
+  ]
+  

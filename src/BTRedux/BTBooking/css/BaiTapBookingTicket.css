@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "phim";
+  src: url(./Perpetua\ Bold\ font.ttf);
+}
+
+/* backgound */
+.bookingMovie {
+  font-family: "fontGame";
+  background-image: url(./cinema.jpg);
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+/* backgound */
+
+/* text */
+.textIntro {
+  color: white;
+  margin-top: 20px;
+}
+.textMonitor {
+  color: white;
+}
+.textGhe {
+  color: white;
+}
+.textSoHangGhe {
+  color: rgb(255, 159, 95);
+  font-size: 25px;
+  text-align: right;
+  font-weight: bolder;
+}
+/* div */
+.screen {
+  border-bottom: 50px solid rgb(255, 159, 95);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  margin-left: 75px;
+  height: 100;
+  width: 80%;
+  filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+  font-size: 25px;
+  color: #fff;
+}
+.divListBtn {
+  text-align: left;
+}
+.listBtn {
+  margin-top: 5px;
+}
+/* div */
+
+/* chair */
+.ghe {
+  border: 3px solid orange;
+  width: 45px;
+  height: 35px;
+  font-size: 12px;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+.rowNumber {
+  font-size: 25px;
+  width: 45px;
+  height: 35px;
+  background: none;
+  border: none;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  font-size: 30px;
+  color: rgb(255, 159, 95);
+}
+.firstChar {
+  color: yellow;
+  font-size: 35px;
+  margin-right: 15px;
+}
+.gheDaDat {
+  border: 3px solid orange;
+  background: orange;
+  color: #000;
+  cursor: no-drop !important;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+}
+.gheDangDat {
+  background: rgb(109, 238, 109);
+  border: 3px solid rgb(109, 238, 109);
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+}
+.gheChuaDat {
+  border: 3px solid orange;
+  width: 45px;
+  height: 35px;
+  font-size: 12px;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+.listGhe {
+  margin-top: 20px;
+}
+.listHangGhe {
+  text-align: left;
+}
+/* chair */
+
+/* sticker */
+.table thead tr th {
+  border: 1px solid white;
+  color: white;
+}
+.table tbody tr td {
+  border: 1px solid white;
+  color: white;
+}
+.fas {
+  color: white;
+}
+/* sticker */
+
+/* scrollbar */
+.scrollbar {
+  float: left;
+  height: 700px;
+  margin-top: 20px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.force-overflow {
+  min-height: 450px;
+}
+#style-1::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+/* scrollbar */

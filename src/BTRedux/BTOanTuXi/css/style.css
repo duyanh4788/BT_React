@@ -1,0 +1,74 @@
+@font-face {
+    font-family: gameOTX;
+    src: url(./Pony.ttf);
+}
+.speech-bubble {
+    position: relative;
+    background: #45d994;
+    border-radius: 0.4em;
+}
+
+.speech-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 35px solid transparent;
+    border-top-color: #45d994;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -17.5px;
+    margin-bottom: -35px;
+}
+.gameOTX {
+    font-family: gameOTX;
+    background-image: url(./bgGame.png);
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: fixed;
+}
+.text {
+    color: white;
+}
+.textHead {
+    margin: 50px 0;
+}
+.textTilte {
+    font-size: 30px;
+}
+.ketQua {
+    color: #45d994;
+}
+.btnPlayGame {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #45d994;
+    color: white;
+    font-size: 30px;
+}
+.player {
+    position: relative;
+}
+.theThink {
+    width: 200px;
+    height: 130px;
+    border: 5px solid #45d994;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: -50%;
+    left: 33%;
+}
+.btnOTX button {
+    border: none;
+    margin: 0 5px;
+}
+.imgComputer {
+    position: absolute;
+    top: 0;
+    left: 17%;
+}

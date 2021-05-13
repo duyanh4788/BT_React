@@ -1,0 +1,46 @@
+.gameXucXac {
+    background-image: url("./bgGame2.png");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.textGameXX {
+    font-size: 40px;
+    margin: 50px 0;
+    color: #05522e;
+}
+.textGameLabel {
+    font-size: 30px;
+    color: #05522e;
+}
+.imgXucXac img {
+    margin-left: 10px;
+}
+.btnTX {
+    font-size: 50px;
+    padding: 0 30px;
+    border-radius: 10px;
+    border: none;
+}
+.Tai {
+    background-color: #ff50312f;
+    color: #d50000;
+}
+.Xiu {
+    background-color: #48484854;
+    color: #000000;
+}
+.btnPlayGame {
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    color: wheat;
+    background-color: rgba(0, 128, 0, 0.657);
+}
+.xucXac {
+    margin: 0 10px;
+}
+.textGame {
+    color: #00701a;
+}
