@@ -12,11 +12,14 @@ import EditIcon from "@material-ui/icons/Edit";
 import CheckIcon from "@material-ui/icons/Check";
 import { styled } from "./ToDoList.style";
 import { connect } from "react-redux";
-import { doneTaskAxios_Action } from "../redux/action/ToDoListAxios_Action";
+import {
+  deleteTaskAxios_Action,
+  doneTaskAxios_Action,
+} from "../redux/action/ToDoListAxios_Action";
 
 class TableToDoPage extends Component {
   render() {
-    const { classes, taskList, doneTask } = this.props;
+    const { classes, taskList, doneTask, dellTask } = this.props;
     return taskList
       .filter((task) => !task.status)
       .map((item, index) => {
@@ -38,7 +41,11 @@ class TableToDoPage extends Component {
                   >
                     <CheckIcon />
                   </Button>
-                  <Button>
+                  <Button
+                    onClick={() => {
+                      dellTask(item.taskName);
+                    }}
+                  >
                     <DeleteIcon />
                   </Button>
                 </TableCell>
@@ -58,6 +65,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     doneTask: (status) => {
       dispatch(doneTaskAxios_Action(status));
+    },
+    dellTask: (task) => {
+      dispatch(deleteTaskAxios_Action(task));
     },
   };
 };

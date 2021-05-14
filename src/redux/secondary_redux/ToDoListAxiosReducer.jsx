@@ -1,6 +1,7 @@
 import {
   GETALL_TASK_AXIOS,
   DONE_TASK_AXIOS,
+  DELETE_TASK_AXIOS,
 } from "../Constants/ToDoListAxios_Constant";
 
 const initalState = {
@@ -14,6 +15,13 @@ export const ToDoListAxiosReducer = (state = initalState, action) => {
   switch (action.type) {
     case GETALL_TASK_AXIOS: {
       state.taskList = action.payload;
+      return { ...state };
+    }
+    case DELETE_TASK_AXIOS: {
+      let index = taskListUpdate.findIndex(
+        (task) => task.taskName === action.payload
+      );
+      taskListUpdate.splice(index, 1);
       return { ...state };
     }
     case DONE_TASK_AXIOS: {

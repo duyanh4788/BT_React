@@ -1,4 +1,4 @@
-import { GETALL_TASK_AXIOS, DONE_TASK_AXIOS } from "../Constants/ToDoListAxios_Constant";
+import { GETALL_TASK_AXIOS, DONE_TASK_AXIOS, DELETE_TASK_AXIOS } from "../Constants/ToDoListAxios_Constant";
 import Axios from 'axios';
 
 export const getAllTask = () => {
@@ -38,6 +38,23 @@ export const doneTaskAxios_Action = (data) => {
             })
             dispatch({
                 type: DONE_TASK_AXIOS,
+                payload: res.data,
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+export const deleteTaskAxios_Action = () => {
+    return async (dispatch) => {
+        try {
+            const res = await Axios({
+                method: 'DELETE',
+                url: 'http://svcy.myclass.vn/api/ToDoList/deleteTask'
+            })
+            dispatch({
+                type: DELETE_TASK_AXIOS,
                 payload: res.data,
             })
         } catch (error) {
