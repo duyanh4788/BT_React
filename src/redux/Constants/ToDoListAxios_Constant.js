@@ -1,0 +1,2 @@
+export const GETALL_TASK_AXIOS = 'GETALL_TASK_AXIOS'
+export const DONE_TASK_AXIOS = 'DONE_TASK_AXIOS'

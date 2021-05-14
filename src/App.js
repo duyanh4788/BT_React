@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import DanhSachKhoaHoc from "./BTRedux/BTDanhSachKhoaHoc/Screens/DanhSachKhoaHoc_Main";
+import ToDoListpage from "./BTAxios/ToDoList.page";
 
 function App() {
   return (
     <>
-      <DanhSachKhoaHoc />
+      <ToDoListpage />
     </>
   );
 }

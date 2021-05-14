@@ -14,5 +14,11 @@ export const themes = createMuiTheme({
       dark: "#9f0000",
       contrastText: "#000000",
     },
+    inherit: {
+      light: "#ffffff",
+      main: "#fafafa",
+      dark: "#c7c7c7",
+      contrastText: "#000000",
+    },
   },
 });
