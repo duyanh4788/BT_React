@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-class ProductItem_P2 extends Component {
+class ProductItemPhone extends Component {
   render() {
     const {
       maSP,
@@ -70,4 +70,4 @@ const mapStateToProps = (state) => {
     gioHang: state.GioHan2Reducers.techSpech,
   };
 };
-export default connect(mapStateToProps, null)(ProductItem_P2);
+export default connect(mapStateToProps, null)(ProductItemPhone);

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-class ProducList_P2 extends Component {
+class ProducListPhone extends Component {
   renderProduct = () => {
     const { gioHang, themGioHang, detailGioHang } = this.props;
     return gioHang.map((item, index) => {
@@ -63,4 +63,4 @@ const mapDispacthToPros = (dispacth) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispacthToPros)(ProducList_P2);
+export default connect(mapStateToProps, mapDispacthToPros)(ProducListPhone);

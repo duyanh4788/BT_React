@@ -11,24 +11,16 @@ export default class Car extends Component {
     let imgSource = "";
     switch (color) {
       case "black":
-        {
-          imgSource = "./img/black-car.jpg";
-        }
+        imgSource = "./img/black-car.jpg";
         break;
       case "red":
-        {
-          imgSource = "./img/red-car.jpg";
-        }
+        imgSource = "./img/red-car.jpg";
         break;
       case "gray":
-        {
-          imgSource = "./img/silver-car.jpg";
-        }
+        imgSource = "./img/silver-car.jpg";
         break;
       case "silver":
-        {
-          imgSource = "./img/steel-car.jpg";
-        }
+        imgSource = "./img/steel-car.jpg";
         break;
       default:
         break;
@@ -65,27 +57,27 @@ export default class Car extends Component {
         <div className="row">
           <div className="col-3">
             <button className="btn" onClick={() => this.renderXe("black")}>
-              <i class="iCon far fa-circle" style={borDer1}></i>
+              <i className="iCon far fa-circle" style={borDer1}></i>
             </button>
           </div>
           <div className="col-3">
             <button className="btn" onClick={() => this.renderXe("red")}>
-              <i class="iCon far fa-circle" style={borDer2}></i>
+              <i className="iCon far fa-circle" style={borDer2}></i>
             </button>
           </div>
           <div className="col-3">
             <button className="btn" onClick={() => this.renderXe("gray")}>
-              <i class="iCon far fa-circle" style={borDer3}></i>
+              <i className="iCon far fa-circle" style={borDer3}></i>
             </button>
           </div>
           <div className="col-3">
             <button className="btn" onClick={() => this.renderXe("silver")}>
-              <i class="iCon far fa-circle " style={borDer4}></i>
+              <i className="iCon far fa-circle " style={borDer4}></i>
             </button>
           </div>
         </div>
         <div className="my-3">
-          <img src={this.state.img} alt width={1000} />
+          <img src={this.state.img} alt={this.state.img} width={1000} />
         </div>
       </div>
     );

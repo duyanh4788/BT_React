@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-export class GioHang_P2 extends Component {
+export class GioHangPhone extends Component {
   renderGioHang = () => {
     const { gioHang, xoaGioHang, upDown } = this.props;
     return gioHang.map((item, index) => {
@@ -137,4 +137,4 @@ const mapDispacthToPros = (dispacth) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispacthToPros)(GioHang_P2);
+export default connect(mapStateToProps, mapDispacthToPros)(GioHangPhone);

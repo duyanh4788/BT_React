@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import ProducList_P2 from "./ProducList_P2";
-import GioHang_P2 from "./GioHang_P2";
-import ProductItem_P2 from "./ProductItem_P2";
+import ProducListPhone from "./ProducListPhone";
+import ProductItemPhone from "./ProductItemPhone";
+import GioHangPhone from "./GioHangPhone";
 import { connect } from "react-redux";
 
-class BTGioHangReducer_P2 extends Component {
+class BTGioHangReducerPhone extends Component {
   renderSoLuong = () => {
     const { gioHang } = this.props;
     let tongSL = gioHang.reduce((tong, item) => {
@@ -23,9 +23,9 @@ class BTGioHangReducer_P2 extends Component {
         >
           Giỏ Hàng ({this.renderSoLuong()})
         </span>
-        <ProducList_P2 />
-        <ProductItem_P2 />
-        <GioHang_P2 />
+        <ProducListPhone />
+        <ProductItemPhone />
+        <GioHangPhone />
       </div>
     );
   }
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => {
     gioHang: state.GioHan2Reducers.gioHangModal,
   };
 };
-export default connect(mapStateToProps, null)(BTGioHangReducer_P2);
+export default connect(mapStateToProps, null)(BTGioHangReducerPhone);
