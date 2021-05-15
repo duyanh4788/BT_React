@@ -36,7 +36,7 @@ class TableToDoPage extends Component {
                   </Button>
                   <Button
                     onClick={() => {
-                      doneTask(item.status);
+                      doneTask(item.taskName);
                     }}
                   >
                     <CheckIcon />
@@ -63,10 +63,11 @@ const mapStateToPops = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    doneTask: (status) => {
-      dispatch(doneTaskAxios_Action(status));
+    doneTask: (taskName) => {
+      dispatch(doneTaskAxios_Action(taskName));
     },
     dellTask: (task) => {
+      console.log(task);
       dispatch(deleteTaskAxios_Action(task));
     },
   };

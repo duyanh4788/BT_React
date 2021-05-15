@@ -11,11 +11,11 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import CheckIcon from "@material-ui/icons/Check";
 import { styled } from "./ToDoList.style";
 import { connect } from "react-redux";
-import { doneTaskAxios_Action } from "../redux/action/ToDoListAxios_Action";
+import { deleteTaskAxios_Action, reJectTaskAxios_Action } from "../redux/action/ToDoListAxios_Action";
 
 class TableCompletedPage extends Component {
   render() {
-    const { classes, taskList, doneTask } = this.props;
+    const { classes, taskList, doneTask, dellTask } = this.props;
     return taskList
       .filter((task) => task.status)
       .map((item, index) => {
@@ -29,12 +29,12 @@ class TableCompletedPage extends Component {
                 <TableCell align="right">
                   <Button
                     onClick={() => {
-                      doneTask(item.status);
+                      doneTask(item.taskName);
                     }}
                   >
                     <CheckIcon />
                   </Button>
-                  <Button>
+                  <Button onClick={() => dellTask(item.taskName)}>
                     <DeleteIcon />
                   </Button>
                 </TableCell>
@@ -53,7 +53,11 @@ const mapStateToPops = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     doneTask: (status) => {
-      dispatch(doneTaskAxios_Action(status));
+      dispatch(reJectTaskAxios_Action(status));
+    },
+    dellTask: (task) => {
+      console.log(task);
+      dispatch(deleteTaskAxios_Action(task));
     },
   };
 };

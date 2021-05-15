@@ -36,7 +36,6 @@ export const ToDoListReducers = (state = stateToDoList, action) => {
         alert("Nhập Task !!!");
         return { ...state };
       }
-      // let taskListUpdate = [...state.taskList];
       let index = taskListUpdate.findIndex(
         (item) => item.taskName === action.newTask
       );

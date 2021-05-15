@@ -7,18 +7,18 @@ class ModalGioHang extends Component {
     return gioHang.map((sanPham, index) => {
       return (
         <tr key={index}>
-          <td>{sanPham.maSP}</td>
-          <td>{sanPham.tenSP}</td>
+          <td className='text-dark'>{sanPham.maSP}</td>
+          <td className='text-dark'>{sanPham.tenSP}</td>
           <td>
             <img src={sanPham.hinhAnh} alt={sanPham.hinhAnh} width={50} />
           </td>
-          <td>{sanPham.gia.toLocaleString()}</td>
+          <td className='text-dark'>{sanPham.gia.toLocaleString()}</td>
           <td>
             <button className='btn border mr-1' onClick={() => upDown(sanPham.maSP, false)}>-</button>
             {sanPham.soLuong}
             <button className='btn border ml-1' onClick={() => upDown(sanPham.maSP, true)}>+</button>
           </td>
-          <td>{(sanPham.soLuong * sanPham.gia).toLocaleString()}</td>
+          <td className='text-dark'>{(sanPham.soLuong * sanPham.gia).toLocaleString()}</td>
           <td>
             <button className='btn btn-info ml-1' onClick={() => deleteMSP(sanPham.maSP)}>delete-MSP</button>
             <button className='btn btn-danger ml-1' onClick={() => deleteID(index)}>delete-ID</button>

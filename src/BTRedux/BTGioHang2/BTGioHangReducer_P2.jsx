@@ -14,7 +14,7 @@ class BTGioHangReducer_P2 extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <div className="container text-center text-dark">
         <h1 className="text-primary mt-5">Bài Tập Giỏ Hàng</h1>
         <span
           className="btn btn-outline-success my-3"

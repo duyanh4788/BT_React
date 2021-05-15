@@ -7,12 +7,12 @@ export class GioHang_P2 extends Component {
     return gioHang.map((item, index) => {
       return (
         <tr key={index}>
-          <td>{item.maSP}</td>
-          <td>{item.tenSP}</td>
+          <td className='text-dark'>{item.maSP}</td>
+          <td className='text-dark'>{item.tenSP}</td>
           <td>
             <img src={item.hinhAnh} alt={item.hinhAnh} width={100} />
           </td>
-          <td>{item.gia.toLocaleString()}</td>
+          <td className='text-dark'>{item.gia.toLocaleString()}</td>
           <td>
             <button
               className="btn border"
@@ -28,7 +28,7 @@ export class GioHang_P2 extends Component {
               +
             </button>
           </td>
-          <td>{(item.gia * item.soLuong).toLocaleString()}</td>
+          <td className='text-dark'>{(item.gia * item.soLuong).toLocaleString()}</td>
           <td>
             <button
               className="btn btn-danger"
@@ -82,8 +82,8 @@ export class GioHang_P2 extends Component {
                 <tfoot>
                   <tr>
                     <td colSpan="5"></td>
-                    <td>Tổng Tiền</td>
-                    <td>
+                    <td className='text-dark'>Tổng Tiền</td>
+                    <td className='text-dark'>
                       {gioHang
                         .reduce((tong, item) => {
                           return (tong += item.soLuong * item.gia);

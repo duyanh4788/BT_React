@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { InputText } from "../../Styled_Component/styled_BTGameXucXac/Text_Field";
 
 class KetQua extends Component {
   render() {
@@ -17,7 +16,6 @@ class KetQua extends Component {
         <p className="textIntro">
           Số Bàn Chơi : <span className="textKetQua">{soBanChoi}</span>
         </p>
-        <InputText inputColor="purple" />
       </div>
     );
   }

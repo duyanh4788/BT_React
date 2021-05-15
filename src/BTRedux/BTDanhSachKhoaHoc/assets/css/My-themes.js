@@ -1,11 +1,12 @@
 import { createMuiTheme } from "@material-ui/core";
 
+// tạo themes
 export const themes = createMuiTheme({
   palette: {
     primary: {
       light: "#c158dc",
-      main: "#8e24aa",
-      dark: "#5c007a",
+      main: "#8e24aa", // trước hover
+      dark: "#5c007a", // sau hover
       contrastText: "#ffffff",
     },
     secondary: {

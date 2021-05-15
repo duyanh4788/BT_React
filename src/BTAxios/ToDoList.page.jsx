@@ -25,6 +25,9 @@ class ToDoListpage extends Component {
     values: {
       taskName: "",
     },
+    error: {
+      taskName: '',
+    }
   };
   handleChange = (e) => {
     let { name, value } = e.target;
@@ -34,7 +37,7 @@ class ToDoListpage extends Component {
     });
   };
   handleAddTask = (task) => {
-    addTaskAxios_Action.addTask(task);
+    this.props.dispatch(addTaskAxios_Action(task))
   };
   render() {
     const { classes } = this.props;
@@ -94,9 +97,4 @@ class ToDoListpage extends Component {
     this.props.dispatch(getAllTask());
   }
 }
-const mapStateToPops = (state) => {
-  return {
-    taskListData: state.ToDoListAxiosReducer.taskList,
-  };
-};
-export default connect(mapStateToPops)(withStyles(styled)(ToDoListpage));
+export default connect()(withStyles(styled)(ToDoListpage));

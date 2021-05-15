@@ -5,7 +5,7 @@ import Product from '../Components/Product'
 import Footer from '../Layout/Footer'
 import Header from '../Layout/Header'
 
-class Home extends Component {
+class DressingRoom extends Component {
     render() {
         return (
             <div className="container-fluid">
@@ -25,4 +25,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default DressingRoom
