@@ -32,21 +32,23 @@ class TableToDoPage extends Component {
                 </TableCell>
                 <TableCell align="right">
                   <Button>
-                    <EditIcon />
+                    <EditIcon color="primary" />
                   </Button>
                   <Button
+                    color="primary"
                     onClick={() => {
                       doneTask(item.taskName);
                     }}
                   >
-                    <CheckIcon />
+                    <CheckIcon color="primary" />
                   </Button>
                   <Button
+                    color="primary"
                     onClick={() => {
                       dellTask(item.taskName);
                     }}
                   >
-                    <DeleteIcon />
+                    <DeleteIcon color="primary" />
                   </Button>
                 </TableCell>
               </TableRow>

@@ -68,16 +68,16 @@ class ToDoListpage extends Component {
               />
             </FormControl>
             <Button
-              variant="contained"
+              color="primary"
+              variant="outlined"
               className={classes.myBtnAdd}
               onClick={() => {
                 this.handleAddTask(this.state.values);
               }}
             >
-              Add Task
-            </Button>
-            <Button variant="contained" className={classes.myBtnUpD}>
-              Update Task
+              <Typography color="primary">
+                Add-Task
+          </Typography>
             </Button>
           </Grid>
           <Divider className={classes.myHr} />

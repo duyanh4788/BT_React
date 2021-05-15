@@ -12,12 +12,7 @@ export const styled = {
     myBtnAdd: {
         margin: '0 5px',
         fontWeight: 'bold',
-        color: '#8e24aa',
-        fontSize: '20px'
-    },
-    myBtnUpD: {
-        fontWeight: 'bold',
-        color: '#8e24aa',
+        color: 'black',
         fontSize: '20px'
     },
     myHr: {

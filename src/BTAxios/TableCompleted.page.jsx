@@ -28,14 +28,15 @@ class TableCompletedPage extends Component {
                 </TableCell>
                 <TableCell align="right">
                   <Button
+                    color="primary"
                     onClick={() => {
                       doneTask(item.taskName);
                     }}
                   >
-                    <CheckIcon />
+                    <CheckIcon color="primary" />
                   </Button>
-                  <Button onClick={() => dellTask(item.taskName)}>
-                    <DeleteIcon />
+                  <Button color="primary" onClick={() => dellTask(item.taskName)}>
+                    <DeleteIcon color="primary" />
                   </Button>
                 </TableCell>
               </TableRow>
