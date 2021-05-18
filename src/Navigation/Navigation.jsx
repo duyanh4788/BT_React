@@ -62,6 +62,7 @@ function Navigation() {
                     <Typography variant="h6" className={classes.title}>
                         <NavLink className={classes.navLink} exact to='/' activeClassName={classes.activeClass}>Home</NavLink>
                         <NavLink className={classes.navLink} exact to='/BTNavlink' activeClassName={classes.activeClass}>BT-Navlink</NavLink>
+                        <NavLink className={classes.navLink} exact to='/bthook' activeClassName={classes.activeClass}>BT-HOOK</NavLink>
                     </Typography>
                     <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="grouped-native-select" className={classes.inputLabel}>Redux</InputLabel>

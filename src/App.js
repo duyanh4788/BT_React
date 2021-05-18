@@ -18,6 +18,7 @@ import HomePage from "./Navigation/HomePage";
 import HeaderNL from "./BTNavLink/HeaderNL";
 import DetailNL from "./BTNavLink/DetailNL";
 import PageNotFound from "./PageNotFound/PageNotFound";
+import ReactHook from "./BTReactHook/ReactHook";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
         />
         <Route exact path="/BTNavlink" component={HeaderNL} />
         <Route exact path="/DetailNL/:id" component={DetailNL} />
+        {/* react hook useContext */}
+        <Route exact path="/bthook" component={ReactHook} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     </BrowserRouter>
