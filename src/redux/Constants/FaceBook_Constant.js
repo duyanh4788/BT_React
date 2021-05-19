@@ -1,0 +1,1 @@
+export const COMMENT_HOOK = "COMMENT_HOOK";

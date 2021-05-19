@@ -11,7 +11,6 @@ const initalState = {
 };
 
 export const ToDoListAxiosReducer = (state = initalState, action) => {
-  console.log(action);
   let taskListUpdate = [...state.taskList];
   switch (action.type) {
     case GETALL_TASK_AXIOS: {
@@ -19,28 +18,32 @@ export const ToDoListAxiosReducer = (state = initalState, action) => {
       return { ...state };
     }
     case ADD_TASK_AXIOS: {
-      taskListUpdate.push(action.payload)
-      state.taskList = taskListUpdate
-      return { ...state }
+      taskListUpdate.push(action.payload);
+      state.taskList = taskListUpdate;
+      return { ...state };
     }
     case DELETE_TASK_AXIOS: {
-      let index = taskListUpdate.findIndex((item) => item.id === action.payload);
+      let index = taskListUpdate.findIndex(
+        (item) => item.id === action.payload
+      );
       taskListUpdate.splice(index, 1);
       return { ...state, taskList: taskListUpdate };
     }
     case DONE_TASK_AXIOS: {
-      let index = taskListUpdate.findIndex(item => item.taskName === action.payload)
+      let index = taskListUpdate.findIndex(
+        (item) => item.taskName === action.payload
+      );
       if (index !== -1) {
         taskListUpdate[index].status = true;
       }
-      state.taskList = taskListUpdate
-      return { ...state }
+      state.taskList = taskListUpdate;
+      return { ...state };
     }
     case REJECT_TASK_AXIOS: {
       let index = taskListUpdate.findIndex(
         (item) => item.taskName === action.payload
       );
-      
+
       if (index !== -1) {
         taskListUpdate[index].status = false;
       }

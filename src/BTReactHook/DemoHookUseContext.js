@@ -31,7 +31,7 @@ function DemoHookUseContext(props) {
       <div className="row">
         {arrProduct.map((item, index) => {
           return (
-            <div className="card col-3" key={index}>
+            <div className="card col-4" key={index}>
               <img
                 className="card-img-top"
                 src="https://picsum.photos/200/300"
