@@ -19,6 +19,7 @@ import HeaderNL from "./BTNavLink/HeaderNL";
 import DetailNL from "./BTNavLink/DetailNL";
 import PageNotFound from "./PageNotFound/PageNotFound";
 import ReactHook from "./BTReactHook/ReactHook";
+import TodolistRfc from "./BTRFCE/Todolist.Rfc";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route exact path="/DressingRoom" component={DressingRoom} />
         <Route exact path="/ToDoListpage" component={ToDoListpage} />
         <Route exact path="/TaskList" component={TaskList} />
+        <Route exact path="/ToDoListRFCE" component={TodolistRfc} />
         <Route exact path="/UserProfile" component={UserProfile} />
         <Route exact path="/FromSinhVien" component={FromSinhVien} />
         <Route

@@ -17,6 +17,7 @@ import { DressingRoomReducers } from "../secondary_redux/DressingRoomReducers";
 import { DanhSachKhoaHocReducers } from "../secondary_redux/DanhSachKhoaHocReducers";
 import { ToDoListAxiosReducer } from "../secondary_redux/ToDoListAxiosReducer";
 import { FacebookReducer } from "../secondary_redux/FacebookReducer";
+import { ToDoListAxiosFunctionReducer } from "../secondary_redux/ToDoListAxiosFunctionReducer";
 
 export const rootReducers = combineReducers({
   XucXacReducers,
@@ -37,4 +38,5 @@ export const rootReducers = combineReducers({
   DanhSachKhoaHocReducers,
   ToDoListAxiosReducer,
   FacebookReducer,
+  ToDoListAxiosFunctionReducer,
 });
