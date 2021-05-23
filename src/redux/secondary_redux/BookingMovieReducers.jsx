@@ -7,6 +7,7 @@ const stateDanhSachGhe = {
 };
 
 export const BookingMovieReducers = (state = stateDanhSachGhe, action) => {
+  console.log(action);
   switch (action.type) {
     case BOOK_GHE: {
       let danhSachGheDaDatUpdate = [...state.danhSachGheDaDat];
