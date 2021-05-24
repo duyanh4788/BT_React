@@ -8,24 +8,14 @@ import "../node_modules/popper.js/dist/popper";
 import "../node_modules/bootstrap/dist/js/bootstrap";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import thunk from "redux-thunk";
-
-// material
-import { ThemeProvider } from "@material-ui/core";
-import { themes } from "../src/BTRedux/BTDanhSachKhoaHoc/assets/css/My-themes";
 
 // redux
 import { Provider } from "react-redux"; // kết nối react và redux bằng provider
-import { applyMiddleware, createStore, compose } from "redux"; // tạo store redux
-import { rootReducers } from "./redux/main_redux/rootReducers"; // tạo store main
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(
-  // nhúng store chính vào store redux
-  rootReducers, // store main
-  composeEnhancers(applyMiddleware(thunk))
-);
+// config store
+import store from "./redux/configStore";
+// material
+import { ThemeProvider } from "@material-ui/core";
+import { themes } from "../src/BTRedux/BTDanhSachKhoaHoc/assets/css/My-themes";
 
 ReactDOM.render(
   <Provider store={store}>

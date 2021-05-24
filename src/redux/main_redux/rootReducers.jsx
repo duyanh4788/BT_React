@@ -18,6 +18,7 @@ import { DanhSachKhoaHocReducers } from "../secondary_redux/DanhSachKhoaHocReduc
 import { ToDoListAxiosReducer } from "../secondary_redux/ToDoListAxiosReducer";
 import { FacebookReducer } from "../secondary_redux/FacebookReducer";
 import { ToDoListAxiosFunctionReducer } from "../secondary_redux/ToDoListAxiosFunctionReducer";
+import { LoadingReducer } from "../secondary_redux/LoadingReducer";
 
 export const rootReducers = combineReducers({
   XucXacReducers,
@@ -39,4 +40,5 @@ export const rootReducers = combineReducers({
   ToDoListAxiosReducer,
   FacebookReducer,
   ToDoListAxiosFunctionReducer,
+  LoadingReducer,
 });

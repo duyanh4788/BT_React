@@ -20,11 +20,14 @@ import DetailNL from "./BTNavLink/DetailNL";
 import PageNotFound from "./PageNotFound/PageNotFound";
 import ReactHook from "./BTReactHook/ReactHook";
 import TodolistRfc from "./BTRFCE/Todolist.Rfc";
+import ToDoListSaga from "./BTRedux_Saga/ToDoListSaga";
+import Loadingcomponent from "./Loading/Loading.component";
 
 function App() {
   return (
     <BrowserRouter>
       <Navigation />
+      <Loadingcomponent />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/BTComponent" component={BTComponent} />
@@ -41,6 +44,7 @@ function App() {
         <Route exact path="/ToDoListpage" component={ToDoListpage} />
         <Route exact path="/TaskList" component={TaskList} />
         <Route exact path="/ToDoListRFCE" component={TodolistRfc} />
+        <Route exact path="/ToDoListSaga" component={ToDoListSaga} />
         <Route exact path="/UserProfile" component={UserProfile} />
         <Route exact path="/FromSinhVien" component={FromSinhVien} />
         <Route

@@ -4,15 +4,13 @@ const initalState = {
     taskList: []
 }
 export const ToDoListAxiosFunctionReducer = (state = initalState, action) => {
-    // let taskListUpdate = [...state.taskList]
     switch (action.type) {
-
         case GET_TASK_RFCE: {
             state.taskList = action.payload;
             return { ...state };
         }
-
         // case ADD_TASK_RFCE: {
+        //     let taskListUpdate = [...state.taskList]
         //     taskListUpdate.push(action.payload)
         //     state.taskList = taskListUpdate;
         //     return { ...state };
