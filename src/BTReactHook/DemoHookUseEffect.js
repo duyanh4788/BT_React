@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ChildUseEffect from "./ChildUseEffect";
 
 function DemoHookUseEffect() {
   let [number, setNumber] = useState(1);
@@ -7,11 +6,11 @@ function DemoHookUseEffect() {
   console.log(like);
   useEffect(() => {
     // chạy sau render thay thế cho componentdidmount
-    console.log("componentdidmount");
+    console.log("componentdidmount4");
   }, []);
   useEffect(() => {
     // chạy sau render thay thế cho componentdidupdate
-    console.log("componentdidupdate");
+    console.log("componentdidupdate5");
   }, [number, like]);
   console.log("render");
   return (
@@ -43,7 +42,7 @@ function DemoHookUseEffect() {
             Like
           </button>
         </div>
-        {like === 1 ? <ChildUseEffect /> : ""}
+        {/* {like === 1 ? <ChildUseEffect /> : ""} */}
       </div>
     </div>
   );

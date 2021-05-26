@@ -1,0 +1,75 @@
+@font-face {
+    font-family: fontGame;
+    src: url(./Pony.ttf);
+}
+@mixin button {
+    background-color: green;
+    color: white;
+    padding: 2px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.gameBauCua {
+    background-color: rgb(255, 155, 2);
+    width: 100%;
+    height: 1200px;
+    font-family: fontGame;
+    h1 {
+        text-align: center;
+        color: red;
+        font-size: 50px;
+        padding: 20px;
+    }
+    .divBetpoint {
+        text-align: center;
+        .textBetpoint {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 10px;
+            .point {
+                color: yellow;
+            }
+        }
+        .btnBetpoint {
+            background-color: green;
+            color: white;
+            margin-top: 40px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+    }
+    .rowTwo {
+        margin: 0 auto;
+        // squash
+        .imgSquash {
+            width: 100%;
+        }
+        .btnSquash {
+            text-align: center;
+            background-color: red;
+            padding: 10px 0px;
+            margin: 5px 0;
+            border-radius: 5px;
+            button {
+                @include button;
+            }
+            span {
+                color: white;
+            }
+        }
+        // dice
+        .listDice {
+            text-align: center;
+            button {
+                @include button;
+            }
+        }
+    }
+}

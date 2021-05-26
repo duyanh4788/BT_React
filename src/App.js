@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Navigation from "./Navigation/Navigation";
 import BTComponent from "./BTComponent/Component/BTComponent";
 import ToDoListpage from "./BTAxios/ToDoList.page";
@@ -17,11 +17,12 @@ import BTGioHangReducerPhone from "./BTRedux/BTGioHang2/BTGioHangReducerPhone";
 import HomePage from "./Navigation/HomePage";
 import HeaderNL from "./BTNavLink/HeaderNL";
 import DetailNL from "./BTNavLink/DetailNL";
-import PageNotFound from "./PageNotFound/PageNotFound";
+// import PageNotFound from "./PageNotFound/PageNotFound";
 import ReactHook from "./BTReactHook/ReactHook";
 import TodolistRfc from "./BTRFCE/Todolist.Rfc";
 import ToDoListSaga from "./BTRedux_Saga/ToDoListSaga";
 import Loadingcomponent from "./Loading/Loading.component";
+import GameBauCua from "./BTRedux/BTBauCua/GameBauCua";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         />
         <Route exact path="/AppXucXac" component={AppXucXac} />
         <Route exact path="/GameOTX" component={GameOTX} />
+        <Route exact path="/GameBC" component={GameBauCua} />
         <Route exact path="/BookingMovie" component={BookingMovie} />
         <Route exact path="/Burger" component={Burger} />
         <Route exact path="/DressingRoom" component={DressingRoom} />
@@ -56,7 +58,10 @@ function App() {
         <Route exact path="/DetailNL/:id" component={DetailNL} />
         {/* react hook useContext */}
         <Route exact path="/bthook" component={ReactHook} />
-        <Route path="*" component={PageNotFound} />
+        {/* <Route path="*" component={PageNotFound} /> */}
+        <Route path="">
+          <Redirect to="/" />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

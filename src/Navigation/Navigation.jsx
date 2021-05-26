@@ -84,6 +84,9 @@ function Navigation() {
                             <MenuItem >
                                 <NavLink className={classes.navLinkIem} exact to='/GameOTX' activeClassName={classes.activeClass}>Game Oẳn Tù Xì</NavLink>
                             </MenuItem>
+                            <MenuItem >
+                                <NavLink className={classes.navLinkIem} exact to='/GameBC' activeClassName={classes.activeClass}>Game Bầu Cua</NavLink>
+                            </MenuItem>
                         </Select>
                     </FormControl>
                     <FormControl className={classes.formControl}>
