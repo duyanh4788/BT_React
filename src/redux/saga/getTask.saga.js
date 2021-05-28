@@ -1,8 +1,8 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
-import { GET_TASK_RFCE } from '../Constants/ToDoListAxiosRFCE_Constant'
 import { toDoListService } from '../../BTRedux_Saga/services/todoList.service'
 import { HIDEN_LOADING, SHOW_LOADING } from '../Constants/Loading.constant'
 import { STATUS_CODE } from '../../BTRedux_Saga/constants/setttingSystem'
+import { GET_TASK_SAGA } from '../Constants/ToDoListAxiosSaga.constant'
 
 function* getTaskAPISaga(action) {
     yield put({
@@ -14,7 +14,7 @@ function* getTaskAPISaga(action) {
         if (status === STATUS_CODE.SUCCESS) {
             // sau khi lấy giá trị từ api dùng hàm put ( dispatch thunk)
             yield put({
-                type: GET_TASK_RFCE,
+                type: GET_TASK_SAGA,
                 payload: data,
             })
         } else {

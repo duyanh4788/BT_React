@@ -20,6 +20,7 @@ import { FacebookReducer } from "../secondary_redux/FacebookReducer";
 import { ToDoListAxiosFunctionReducer } from "../secondary_redux/ToDoListAxiosFunctionReducer";
 import { LoadingReducer } from "../secondary_redux/LoadingReducer";
 import { GameBauCuaReducer } from "../secondary_redux/GameBauCuaReducer";
+import { ToDoListAxiosSagaReducer } from "../secondary_redux/ToDoListAxiosSagaReducer";
 
 export const rootReducers = combineReducers({
   XucXacReducers,
@@ -43,4 +44,5 @@ export const rootReducers = combineReducers({
   ToDoListAxiosFunctionReducer,
   LoadingReducer,
   GameBauCuaReducer,
+  ToDoListAxiosSagaReducer,
 });

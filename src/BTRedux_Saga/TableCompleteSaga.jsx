@@ -22,7 +22,7 @@ function TableCompleteSaga() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const taskList = useSelector((state) => {
-    return state.ToDoListAxiosFunctionReducer.taskList;
+    return state.ToDoListAxiosSagaReducer.taskList;
   });
   const checkTask = (taskName) => {
     dispatch({
