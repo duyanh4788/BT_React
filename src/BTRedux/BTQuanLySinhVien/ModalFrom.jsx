@@ -131,3 +131,6 @@ const mapDispacthToProps = (dispatch) => {
     }
 }
 export default connect(null, mapDispacthToProps)(ModalFrom)
+
+
+

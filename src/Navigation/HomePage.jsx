@@ -1,27 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-  },
-}));
+import React from "react";
+import "./scss/homePage.css"
 
 export default function HomePage() {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Paper elevation={3} />
-      <Paper elevation={3}/>
-      <Paper elevation={3} />
+    <div className="homeMiniProject">
+      <h5>Demo Mini Project (Not Responsive Mobile)</h5>
     </div>
   );
 }

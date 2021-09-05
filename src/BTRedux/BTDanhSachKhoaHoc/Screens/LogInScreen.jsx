@@ -25,7 +25,6 @@ class SignupScreen extends Component {
           {({ handleChange }) => (
             <Form>
               <div className="form-group">
-                <label>Tài Khoản</label>
                 <Field
                   type="text"
                   className="form-control"
@@ -34,7 +33,6 @@ class SignupScreen extends Component {
                 />
               </div>
               <div className="form-group">
-                <label>Mật Khẩu</label>
                 <Field
                   type="password"
                   className="form-control"

@@ -9,7 +9,7 @@ function DemoHookUseCallBack() {
   const notiFy = () => {
     return `Bạn đã like ${like} lần !`;
   };
-  const callBack = useCallback(notiFy, [number]);
+  const callBack = useCallback(notiFy, [like]);
 
   return (
     <div>

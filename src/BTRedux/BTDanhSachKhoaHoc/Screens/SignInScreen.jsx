@@ -37,7 +37,6 @@ class SignInScreen extends Component {
           {({ handleChange }) => (
             <Form>
               <div className="form-group">
-                <label>Tài Khoản</label>
                 <Field
                   type="text"
                   className="form-control"
@@ -49,7 +48,6 @@ class SignInScreen extends Component {
                 </ErrorMessage>
               </div>
               <div className="form-group">
-                <label>Mật Khẩu</label>
                 <Field
                   type="password"
                   className="form-control"
@@ -61,7 +59,6 @@ class SignInScreen extends Component {
                 </ErrorMessage>
               </div>
               <div className="form-group">
-                <label>Họ Tên</label>
                 <Field
                   type="text"
                   className="form-control"
@@ -73,7 +70,6 @@ class SignInScreen extends Component {
                 </ErrorMessage>
               </div>
               <div className="form-group">
-                <label>Số Điện Thoại</label>
                 <Field
                   type="number"
                   className="form-control"
@@ -85,7 +81,6 @@ class SignInScreen extends Component {
                 </ErrorMessage>
               </div>
               <div className="form-group">
-                <label>Email</label>
                 <Field
                   type="email"
                   className="form-control"
@@ -97,7 +92,6 @@ class SignInScreen extends Component {
                 </ErrorMessage>
               </div>
               <div className="form-group">
-                <label>Mã Nhóm</label>
                 <Field
                   component="select"
                   className="form-control"
