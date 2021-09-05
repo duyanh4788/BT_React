@@ -59,9 +59,10 @@ function ToDoListSaga() {
     });
   };
   const adTask = () => {
+    const datas = { taskName: task.values.taskName, status: false }
     dispatch({
       type: "addTaskAction",
-      taskName: task.values.taskName,
+      datas,
     });
   };
   return (

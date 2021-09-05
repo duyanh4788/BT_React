@@ -32,11 +32,11 @@ function TableCompleteRfc() {
   useEffect(() => {
     dispatch(getTaskListRfce_Action());
   }, [dispatch]);
-  const doneTask = (task) => {
-    dispatch(rejectTaskListRfce_Action(task));
+  const doneTask = (items) => {
+    dispatch(rejectTaskListRfce_Action(items));
   };
-  const dellTask = (task) => {
-    dispatch(deleteTaskListRfce_Action(task));
+  const dellTask = (taskId) => {
+    dispatch(deleteTaskListRfce_Action(taskId));
   };
   return taskList
     .filter((task) => task.status)
@@ -52,7 +52,7 @@ function TableCompleteRfc() {
                 <Button
                   color="primary"
                   onClick={() => {
-                    doneTask(item.taskName);
+                    doneTask(item);
                   }}
                 >
                   <CheckIcon color="primary" />
@@ -60,7 +60,7 @@ function TableCompleteRfc() {
                 <Button
                   color="primary"
                   onClick={() => {
-                    dellTask(item.taskName);
+                    dellTask(item.id);
                   }}
                 >
                   <DeleteIcon color="primary" />

@@ -7,7 +7,7 @@ export const getTaskListRfce_Action = () => {
         try {
             const res = await Axios({
                 method: 'GET',
-                url: "http://svcy.myclass.vn/api/ToDoList/GetAllTask"
+                url: "https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga"
             })
             dispatch({
                 type: GET_TASK_RFCE,
@@ -24,13 +24,9 @@ export const addTaskListRfce_Action = (data) => {
         try {
             await Axios({
                 method: 'POST',
-                url: 'http://svcy.myclass.vn/api/ToDoList/AddTask',
+                url: 'https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga',
                 data,
             })
-            // dispatch({
-            //     type: ADD_TASK_RFCE,
-            //     payload: res.data,
-            // })
             dispatch(getTaskListRfce_Action())
         } catch (err) {
             console.log(err);
@@ -39,16 +35,14 @@ export const addTaskListRfce_Action = (data) => {
 }
 
 export const doneTaskListRfce_Action = (taskName) => {
+    const dataS = { ...taskName, status: true }
     return async dispatch => {
         try {
             await Axios({
                 method: 'PUT',
-                url: `http://svcy.myclass.vn/api/ToDoList/doneTask?taskName=${taskName}`,
+                url: `https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga/${taskName.id}`,
+                data: dataS,
             })
-            // dispatch({
-            //     type: DONE_TASK_RFCE,
-            //     payload: res.data
-            // })
             dispatch(getTaskListRfce_Action())
         } catch (error) {
             console.log(error);
@@ -56,33 +50,27 @@ export const doneTaskListRfce_Action = (taskName) => {
     }
 }
 export const rejectTaskListRfce_Action = (taskName) => {
+    const dataS = { ...taskName, status: false }
     return async dispatch => {
         try {
             await Axios({
                 method: 'PUT',
-                url: `http://svcy.myclass.vn/api/ToDoList/rejectTask?taskName=${taskName}`,
+                url: `https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga/${taskName.id}`,
+                data: dataS,
             })
-            // dispatch({
-            //     type: REJECT_TASK_RFCE,
-            //     payload: res.data
-            // })
             dispatch(getTaskListRfce_Action())
         } catch (error) {
             console.log(error);
         }
     }
 }
-export const deleteTaskListRfce_Action = (taskName) => {
+export const deleteTaskListRfce_Action = (taskId) => {
     return async dispatch => {
         try {
             await Axios({
                 method: 'DELETE',
-                url: `http://svcy.myclass.vn/api/ToDoList/deleteTask?taskName=${taskName}`,
+                url: `https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga/${taskId}`,
             })
-            // dispatch({
-            //     type: DELETE_TASK_RFCE,
-            //     payload: res.data
-            // })
             dispatch(getTaskListRfce_Action())
         } catch (error) {
             console.log(error);

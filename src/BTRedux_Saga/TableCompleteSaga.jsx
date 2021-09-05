@@ -24,16 +24,16 @@ function TableCompleteSaga() {
   const taskList = useSelector((state) => {
     return state.ToDoListAxiosSagaReducer.taskList;
   });
-  const checkTask = (taskName) => {
+  const checkTask = (items) => {
     dispatch({
       type: "rejectTaskAction",
-      taskName,
+      items,
     });
   };
-  const dellTask = (taskName) => {
+  const dellTask = (taskId) => {
     dispatch({
       type: "deleteTaskAction",
-      taskName,
+      taskId,
     });
   };
   return taskList
@@ -50,7 +50,7 @@ function TableCompleteSaga() {
                 <Button
                   color="primary"
                   onClick={() => {
-                    checkTask(item.taskName);
+                    checkTask(item);
                   }}
                 >
                   <CheckIcon color="primary" />
@@ -58,7 +58,7 @@ function TableCompleteSaga() {
                 <Button
                   color="primary"
                   onClick={() => {
-                    dellTask(item.taskName);
+                    dellTask(item.id);
                   }}
                 >
                   <DeleteIcon color="primary" />

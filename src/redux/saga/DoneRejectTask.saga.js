@@ -4,10 +4,9 @@ import { toDoListService } from "../../BTRedux_Saga/services/todoList.service";
 
 
 function* doneTaskAPISaga(action) {
-    const { taskName } = action
-    console.log(taskName);
+    const { items } = action
     try {
-        const { data, status } = yield call(() => { return toDoListService.doneAPI(taskName) })
+        const { data, status } = yield call(() => { return toDoListService.doneAPI(items) })
         console.log(data);
         if (status === STATUS_CODE.SUCCESS) {
             yield put({
@@ -25,10 +24,9 @@ export function* doneTaskAPIAction() {
 }
 
 function* rejectTaskAPISaga(action) {
-    const { taskName } = action
-    console.log(taskName);
+    const { items } = action
     try {
-        let { status } = yield call(() => { return toDoListService.rejectAPI(taskName) })
+        let { status } = yield call(() => { return toDoListService.rejectAPI(items) })
         if (status === STATUS_CODE.SUCCESS) {
             yield put({
                 type: "getTaskAPIaction"

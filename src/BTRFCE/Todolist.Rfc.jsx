@@ -48,10 +48,8 @@ function TodolistRfc() {
       taskName: "",
     },
   });
-  console.log(task);
   const handleChange = (e) => {
     let { name, value } = e.target;
-    console.log(name, value);
     let valuesUpdate = { ...task.values, [name]: value };
     setTask({
       ...task,
@@ -59,7 +57,8 @@ function TodolistRfc() {
     });
   };
   const handleAddTask = (task) => {
-    dispatch(addTaskListRfce_Action(task));
+    const data = { taskName: task.taskName, status: false }
+    dispatch(addTaskListRfce_Action(data));
   };
   return (
     <>

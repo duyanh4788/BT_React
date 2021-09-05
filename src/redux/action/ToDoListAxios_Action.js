@@ -12,7 +12,7 @@ export const getAllTask = () => {
     try {
       const res = await Axios({
         method: "GET",
-        url: "http://svcy.myclass.vn/api/ToDoList/GetAllTask",
+        url: "https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga"
       });
       dispatch({
         type: GETALL_TASK_AXIOS,
@@ -29,7 +29,7 @@ export const addTaskAxios_Action = (task) => {
     try {
       const res = await Axios({
         method: "POST",
-        url: "http://svcy.myclass.vn/api/ToDoList/AddTask",
+        url: "https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga",
         data: task,
       });
       dispatch({
@@ -42,15 +42,17 @@ export const addTaskAxios_Action = (task) => {
   };
 };
 export const doneTaskAxios_Action = (taskName) => {
+  const dataS = { ...taskName, status: true }
   return async (dispatch) => {
     try {
       await Axios({
         method: "PUT",
-        url: `http://svcy.myclass.vn/api/ToDoList/doneTask?taskName=${taskName}`,
+        url: `https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga/${taskName.id}`,
+        data: dataS
       });
       dispatch({
         type: DONE_TASK_AXIOS,
-        payload: taskName,
+        payload: dataS.taskName,
       });
     } catch (error) {
       console.log(error);
@@ -58,15 +60,18 @@ export const doneTaskAxios_Action = (taskName) => {
   };
 };
 export const reJectTaskAxios_Action = (taskName) => {
+  const dataS = { ...taskName, status: false }
   return async (dispatch) => {
     try {
       await Axios({
         method: "PUT",
-        url: `http://svcy.myclass.vn/api/ToDoList/rejectTask?taskName=${taskName}`,
+        url: `https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga/${taskName.id}`,
+        data : dataS
       });
+      console.log(dataS);
       dispatch({
         type: REJECT_TASK_AXIOS,
-        payload: taskName,
+        payload: dataS.taskName,
       });
     } catch (error) {
       console.log(error);
@@ -74,12 +79,12 @@ export const reJectTaskAxios_Action = (taskName) => {
   };
 };
 
-export const deleteTaskAxios_Action = (taskName) => {
+export const deleteTaskAxios_Action = (taskId) => {
   return async (dispatch) => {
     try {
       const res = await Axios({
         method: "DELETE",
-        url: `http://svcy.myclass.vn/api/ToDoList/deleteTask?taskName=${taskName}`,
+        url: `https://6044318ba20ace001728ebad.mockapi.io/api/taksSaga/${taskId}`,
       });
       dispatch({
         type: DELETE_TASK_AXIOS,

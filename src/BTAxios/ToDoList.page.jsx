@@ -37,7 +37,8 @@ class ToDoListpage extends Component {
     });
   };
   handleAddTask = (task) => {
-    this.props.dispatch(addTaskAxios_Action(task))
+    const dataS = { taskName: task.taskName, status: false }
+    this.props.dispatch(addTaskAxios_Action(dataS))
   };
   render() {
     const { classes } = this.props;
@@ -77,7 +78,7 @@ class ToDoListpage extends Component {
             >
               <Typography color="primary">
                 Add-Task
-          </Typography>
+              </Typography>
             </Button>
           </Grid>
           <Divider className={classes.myHr} />

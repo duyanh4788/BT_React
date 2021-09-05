@@ -30,12 +30,12 @@ class TableCompletedPage extends Component {
                   <Button
                     color="primary"
                     onClick={() => {
-                      doneTask(item.taskName);
+                      doneTask(item);
                     }}
                   >
                     <CheckIcon color="primary" />
                   </Button>
-                  <Button color="primary" onClick={() => dellTask(item.taskName)}>
+                  <Button color="primary" onClick={() => dellTask(item.id)}>
                     <DeleteIcon color="primary" />
                   </Button>
                 </TableCell>
@@ -53,12 +53,11 @@ const mapStateToPops = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    doneTask: (status) => {
-      dispatch(reJectTaskAxios_Action(status));
+    doneTask: (items) => {
+      dispatch(reJectTaskAxios_Action(items));
     },
-    dellTask: (task) => {
-      console.log(task);
-      dispatch(deleteTaskAxios_Action(task));
+    dellTask: (taskId) => {
+      dispatch(deleteTaskAxios_Action(taskId));
     },
   };
 };

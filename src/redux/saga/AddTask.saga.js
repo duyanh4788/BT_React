@@ -1,5 +1,4 @@
 import { call, put, takeLatest } from "@redux-saga/core/effects";
-import { STATUS_CODE } from "../../BTRedux_Saga/constants/setttingSystem";
 import { toDoListService } from "../../BTRedux_Saga/services/todoList.service";
 import { HIDEN_LOADING, SHOW_LOADING } from "../Constants/Loading.constant";
 
@@ -8,8 +7,9 @@ function* addTaskAPISaga(action) {
         type: SHOW_LOADING
     })
     try {
-        let { status } = yield call(() => { return toDoListService.postAPI(action) })
-        if (status === STATUS_CODE.SUCCESS) {
+        console.log(action.datas);
+        let { status } = yield call(() => { return toDoListService.postAPI(action.datas) })
+        if (status === 201) {
             yield put({
                 type: 'getTaskAPIaction'
             })

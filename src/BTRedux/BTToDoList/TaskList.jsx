@@ -65,7 +65,6 @@ class TaskList extends Component {
     document.getElementById("inputTaskList").value = "";
   };
   render() {
-    console.log("main");
     const { themesToDoList, changeThemes } = this.props;
     let { taskName } = this.state;
     return (
@@ -90,33 +89,17 @@ class TaskList extends Component {
               }}
             />
             {/* add task */}
-            <Button id="addTask">
-              <i
-                className="fa fa-plus"
-                onClick={() => {
-                  this.rederAddTask(taskName);
-                }}
-              >
-                {" "}
-                Add Task{" "}
-              </i>
+            <Button id="addTask" onClick={() => { this.rederAddTask(taskName) }}>
+              <i className="fa fa-plus">Add Task</i>
             </Button>
             <Button id="upDate" disabled={true}>
               <i
                 className="fa fa-upload"
                 onClick={() => {
                   let { taskName } = this.state;
-                  this.setState(
-                    {
-                      taskName: "",
-                    },
-                    () => {
-                      this.renderUpdate(taskName);
-                    }
-                  );
+                  this.setState({ taskName: "" }, () => { this.renderUpdate(taskName) })
                 }}
               >
-                {" "}
                 UpDate Task{" "}
               </i>
             </Button>

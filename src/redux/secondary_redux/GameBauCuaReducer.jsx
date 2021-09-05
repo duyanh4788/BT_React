@@ -22,7 +22,6 @@ const initialState = {
 };
 
 export const GameBauCuaReducer = (state = initialState, { type, payload }) => {
-  console.log(type);
   switch (type) {
     case DAT_CUOC_BC: {
       let listBettingUpdate = [...state.ListBetting];

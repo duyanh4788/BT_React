@@ -37,7 +37,7 @@ class TableToDoPage extends Component {
                   <Button
                     color="primary"
                     onClick={() => {
-                      doneTask(item.taskName);
+                      doneTask(item);
                     }}
                   >
                     <CheckIcon color="primary" />
@@ -45,7 +45,7 @@ class TableToDoPage extends Component {
                   <Button
                     color="primary"
                     onClick={() => {
-                      dellTask(item.taskName);
+                      dellTask(item.id);
                     }}
                   >
                     <DeleteIcon color="primary" />
@@ -65,12 +65,12 @@ const mapStateToPops = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    doneTask: (taskName) => {
-      dispatch(doneTaskAxios_Action(taskName));
+    doneTask: (items) => {
+      dispatch(doneTaskAxios_Action(items));
     },
-    dellTask: (task) => {
-      console.log(task);
-      dispatch(deleteTaskAxios_Action(task));
+    dellTask: (taskId) => {
+      console.log(taskId);
+      dispatch(deleteTaskAxios_Action(taskId));
     },
   };
 };

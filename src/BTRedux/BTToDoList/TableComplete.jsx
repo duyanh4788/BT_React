@@ -15,15 +15,14 @@ class TableComplete extends Component {
                 <Tr key={index}>
                     <Th>{item.taskName}</Th>
                     <Th2>
-                        <Button><i className='fa fa-check' onClick={() => { doneComplte(item.done) }}></i></Button>
-                        <Button><i className='fa fa-trash' onClick={() => { dellToDo(item.id) }}></i></Button>
+                        <Button onClick={() => { doneComplte(item.done) }}><i className='fa fa-check' ></i></Button>
+                        <Button onClick={() => { dellToDo(item.id) }}><i className='fa fa-trash'></i></Button>
                     </Th2>
                 </Tr>
             )
         })
     }
     render() {
-        console.log('TableComplete');
         return (
             <Table>
                 <Tbody>

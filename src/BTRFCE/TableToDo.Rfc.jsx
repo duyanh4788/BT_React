@@ -27,20 +27,22 @@ const useStyles = makeStyles(() => ({
 function TableToDoRfc() {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const taskList = useSelector((state) => {
-    return state.ToDoListAxiosFunctionReducer.taskList;
-  });
+
   useEffect(() => {
     dispatch(getTaskListRfce_Action());
   }, [dispatch]);
 
   const doneTask = (task) => {
+    console.log(task);
     dispatch(doneTaskListRfce_Action(task));
   };
-  const dellTask = (task) => {
-    dispatch(deleteTaskListRfce_Action(task));
+  const dellTask = (taskId) => {
+    dispatch(deleteTaskListRfce_Action(taskId));
   };
 
+  const taskList = useSelector((state) => {
+    return state.ToDoListAxiosFunctionReducer.taskList;
+  });
   return taskList
     .filter((task) => !task.status)
     .map((item, index) => {
@@ -58,7 +60,7 @@ function TableToDoRfc() {
                 <Button
                   color="primary"
                   onClick={() => {
-                    doneTask(item.taskName);
+                    doneTask(item);
                   }}
                 >
                   <CheckIcon color="primary" />
@@ -66,7 +68,7 @@ function TableToDoRfc() {
                 <Button
                   color="primary"
                   onClick={() => {
-                    dellTask(item.taskName);
+                    dellTask(item.id);
                   }}
                 >
                   <DeleteIcon color="primary" />

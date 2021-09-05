@@ -1,4 +1,4 @@
-export const DOMAIN = 'http://svcy.myclass.vn/api'
+export const DOMAIN = 'https://6044318ba20ace001728ebad.mockapi.io/api'
 
 export const STATUS_CODE = {
     SUCCESS: 200,

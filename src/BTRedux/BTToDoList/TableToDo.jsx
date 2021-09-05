@@ -31,7 +31,6 @@ class TableToDo extends Component {
         })
     }
     render() {
-        console.log('TableToDo');
         return (
             <Table>
                 <Thead>

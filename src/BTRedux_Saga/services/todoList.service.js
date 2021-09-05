@@ -5,32 +5,36 @@ export class ToDoListService {
     getAPI = () => {
         return Axios({
             method: 'GET',
-            url: `${DOMAIN}/ToDoList/GetAllTask`,
+            url: `${DOMAIN}/taksSaga`,
         })
     }
     postAPI = (taskName) => {
         return Axios({
             method: 'POST',
-            url: `${DOMAIN}/ToDoList/AddTask`,
+            url: `${DOMAIN}/taksSaga`,
             data: taskName,
         })
     }
     doneAPI = (taskName) => {
+        const datas = { ...taskName, status: true }
         return Axios({
             method: 'PUT',
-            url: `${DOMAIN}/ToDoList/doneTask?taskName=${taskName}`
+            url: `${DOMAIN}/taksSaga/${taskName.id}`,
+            data: datas,
         })
     }
     rejectAPI = (taskName) => {
+        const datas = { ...taskName, status: false }
         return Axios({
             method: "PUT",
-            url: `${DOMAIN}/ToDoList/rejectTask?taskName=${taskName}`
+            url: `${DOMAIN}/taksSaga/${taskName.id}`,
+            data: datas,
         })
     }
-    deleteAPI = (taskName) => {
+    deleteAPI = (taskId) => {
         return Axios({
             method: 'DELETE',
-            url: `${DOMAIN}/ToDoList/deleteTask?taskName=${taskName}`
+            url: `${DOMAIN}/taksSaga/${taskId}`
         })
     }
 }
