@@ -14,19 +14,24 @@ import { logIn_Action } from "../../../redux/action/DanhSachKhoaHoc_Action";
 class DanhSachKhoaHoc extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Navbar />
-        <Switch>
-          <Fragment>
-            <Container maxWidth="lg">
-              <Route path="/" exact component={CourseItem} />
-              <Route path="/detail/:courseId" exact component={Detailitem} />
-              <Route path="/signin" exact component={SignInScreen} />
-              <Route path="/login" exact component={LogInScreen} />
-            </Container>
-          </Fragment>
-        </Switch>
-      </BrowserRouter>
+      <>
+        <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Fragment>
+              <Container maxWidth="lg">
+                <Route path="/" exact component={CourseItem} />
+                <Route path="/detail/:courseId" exact component={Detailitem} />
+                <Route path="/signin" exact component={SignInScreen} />
+                <Route path="/login" exact component={LogInScreen} />
+              </Container>
+            </Fragment>
+          </Switch>
+        </BrowserRouter>
+        <Container>
+          <CourseItem />
+        </Container>
+      </>
     );
   }
   _getCredentialFromLocal = () => {

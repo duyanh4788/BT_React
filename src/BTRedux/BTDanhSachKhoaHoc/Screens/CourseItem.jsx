@@ -9,9 +9,10 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 // material css
-import { withStyles } from "@material-ui/core";
+import { Fab, withStyles } from "@material-ui/core";
 import { styled } from "./styles.screens";
-
+import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
+import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 // redux
 import { connect } from "react-redux";
 import { getAPI_Action } from "../Services/Axios_Action";
@@ -20,9 +21,26 @@ import { getAPI_Action } from "../Services/Axios_Action";
 import { Link } from "react-router-dom";
 
 export class Navbartest extends Component {
+
+  state = {
+    visiable: 3
+  }
+
+  showLoadMore = () => {
+    this.setState({
+      visiable: this.state.visiable + 3
+    })
+  }
+
+  closeLoadMore = () => {
+    this.setState({
+      visiable: 3
+    })
+  }
+
   renderDanhSach = () => {
     const { dsKhoaHoc, classes } = this.props;
-    return dsKhoaHoc.map((item, index) => {
+    return dsKhoaHoc.slice(0, this.state.visiable).map((item, index) => {
       return (
         <Grid
           container
@@ -80,6 +98,14 @@ export class Navbartest extends Component {
         <Grid container spacing={2}>
           {this.renderDanhSach()}
         </Grid>
+        <div style={{ textAlign: "center", margin: "50px 0" }}>
+          <Fab size="small" color="primary" onClick={this.showLoadMore} style={{ margin: "0 5px" }}>
+            <MoreHorizOutlinedIcon />
+          </Fab>
+          <Fab size="small" color="primary" onClick={this.closeLoadMore}>
+            <CloseOutlinedIcon />
+          </Fab>
+        </div>
       </>
     );
   }

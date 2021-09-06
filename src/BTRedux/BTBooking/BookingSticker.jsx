@@ -37,7 +37,7 @@ class BookingSticker extends Component {
               <tr>
                 <td colSpan="3">
                   Tổng Tiền :{" "}
-                  <span>
+                  <span className="text-success">
                     {danhSachGheDaDat
                       .reduce((tong, item) => {
                         return (tong += item.gia);
